@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  frontend:
+    build:
+      context: ./vuetify_server
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+  backend:
+    build:
+      context: ./django_server
+      dockerfile: Dockerfile.dev
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+    env_file:
+      - .env
+
+  postgres:
+    image: postgres:latest
+    env_file:
+      - .env
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

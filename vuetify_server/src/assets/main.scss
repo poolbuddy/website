@@ -1,0 +1,92 @@
+@use 'vuetify';
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+@font-face {
+    font-family: 'Calistoga';
+    src: url(../assets/fonts/Calistoga-Regular.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Fredericka the Great';
+    src: url(../assets/fonts/FrederickatheGreat-Regular.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Acme';
+    src: url(../assets/fonts/Acme-Regular.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Righteous';
+    src: url(../assets/fonts/Righteous-Regular.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'PermanentMarker';
+    src: url(../assets/fonts/PermanentMarker-Regular.woff2) format('woff2');
+}
+
+$lucky-font-family: 'Luckiest Guy', sans-serif;
+$lexand-font-family: 'Lexend Tera', sans-serif;
+$italiana-font-family: 'Italiana', sans-serif;
+$cormorant-font-family: 'Cormorant SC', sans-serif;
+$calistoga-font-family: 'Calistoga', sans-serif;
+$frederickatheGreat-font-family: 'Fredericka the Great', sans-serif;
+$acme-font-family: 'Acme', sans-serif;
+$righteous-font-family: 'Righteous', sans-serif;
+$permanentMarker-font-family: 'PermanentMarker', sans-serif;
+
+// Your additional custom styles
+
+.fred {
+    font-family: $frederickatheGreat-font-family;
+}
+
+.lex {
+    font-family: $lexand-font-family;
+}
+
+.concierge {
+    font-family: $italiana-font-family;
+}
+
+.value {
+    font-family: $permanentMarker-font-family;
+}
+
+.alla {
+    font-family: $righteous-font-family;
+}
+
+.v-btn .wide-font {
+    font-family: $lexand-font-family;
+}
+
+.fade-enter-from {
+    opacity: 0;
+}
+
+.fade-enter-to {
+    opacity: 1;
+}
+
+.fade-enter-active {
+    transition: all 6s ease
+}
+
+.route-enter-from {
+    opacity: 0;
+    transform: translateX(100px)
+}
+
+.route-enter-active {
+    transition: all 0.3s ease-out;
+}
+
+.route-leave-to {
+    opacity: 0;
+    transform: translateX(-100px)
+}

@@ -1,0 +1,300 @@
+
+POST http://localhost:8000/info/customer-profile/
+Content-Type: application/json
+
+{
+        "email": "admin@admin.com",
+        "phone": "123123123",
+        "name": "noop",
+        "pool_data": 1,
+        "address": 1,
+        "product_list": 3,
+        "last_login_array": ["2022-02-02"]
+}
+###
+GET http://localhost:8000/info/customer-profile/?email=email@email.com
+Content-Type: application/json
+
+
+###
+POST http://localhost:8000/info/address/
+Content-Type: application/json
+
+{
+    "street" : "street",
+    "town" : "town.value", 
+    "zipcode" : "zipcode.value" 
+}
+###
+POST http://localhost:8000/info/pool/
+Content-Type: application/json
+
+{
+    "pool_type" : "pool_ty",
+    "above_shape" : "above_shape",
+    "pool_shape" :"inground_shape",
+    "pool_size" : "above_alue",
+    "inground_size" : "inground_sizealue",
+    "filter_type" : "filter_typalue",
+    "sanitizer_type" : "sanitizer_typvalue",
+    "pump_num" : 1,
+    "pool_conditions" : ["cond","conf 2"],
+    "pool_extra_equipment" : ["pop","pop"],
+    "skimmer_num" : 2,
+    "main_drain_num" : 2,
+    "return_num" : 3,
+    "floor_return_num" : 3,
+    "comments" : ""
+    }
+###
+GET http://localhost:8000/info/customer-profile/get_by_email/?email=geeschmail1@gmail.com
+Content-Type: application/json
+
+
+###
+GET http://localhost:8000/info/customer-profile/get_by_email/?email=geeschmail@gmail.com
+Content-Type: application/json
+###
+GET http://localhost:8000/info/customer-profile/get_by_email/?email=geeschmail@gmail.com
+Content-Type: application/json
+###
+
+
+PUT http://localhost:8000/info/customer-profile/1/update_last_login/
+Content-Type: application/json
+
+
+###
+POST http://localhost:8000/info/maintenance-agreement/
+Content-Type: application/json
+
+{
+    "user_email" : "admin@admin.com",
+    "periodicity" : 2,
+    "chosen_plan" : "value",
+    "day_of_service" : "monday",
+    "includes_chemicals" : false
+}
+###
+GET http://localhost:8000/info/maintenance-agreement/
+Content-Type: application/json
+
+{
+    "user_email" : "admin@admin.com",
+}
+
+###
+GET http://localhost:8000/info/pool-conditions/
+Content-Type: application/json
+
+###
+GET http://localhost:8000/info/pool-conditions/
+Content-Type: application/json
+# ----------------------------------------------------------------------------------------------
+
+###
+POST http://localhost:8000/forms/estimate/
+Content-Type: application/json
+
+{
+    "user_email" : "admin@admin.com",
+    "periodicity" : 2,
+    "chosen_plan" : "value",
+    "day_of_service" : "monday",
+    "includes_chemicals" : false,
+    "user_email" : "default",
+    "user_phone" : "default",
+    "services_of_interest" : ["serv 1", "serv 2"],
+    "date_given" : "2022-02-02",
+    "photos" : null,
+    "time_of_day" : "default",
+    "call_asap" : false,
+    "confirm_text" : false,
+    "picture_array" : null
+}
+
+###
+POST http://localhost:8000/forms/maintenance_agreement/
+Content-Type: application/json
+
+{
+    "phone" : "631678987655",
+    "email" :  "geeschmail@gmail.com",
+    "frequency_of_service" : "admin@admin.com",
+    "insurance_understand" : false,
+    "equipment_comments" : "value",
+    "equipment_understand" : false,
+    "access_comments" : "value",
+    "equipment_is_good" : false,
+    "there_is_access" : false,
+    "responsibility_comments" : "value",
+    "pump_settings_understand_2" : false,
+    "access_understand" : false,
+    "pump_settings_understand_1" : false,
+    "leak_chemical_understand" : false,
+    "understand_termination" : false,
+    "bundled_maintenance_plan" : false,
+    "check_payment_extra_pref" : "value",
+    "prefered_payment_method" : "value",
+    "end_date" : "2022-12-22",
+    "start_date" : "2022-12-22",
+    "alternate_service_day_preference" : "value",
+    "weather_delay_preference" : "value",
+    "services_of_interest" : "value",
+    "communication_comments" : "value",
+    "preferred_communication_method" : "value",
+    "select_extras" : "value",
+    "select_scope" : "value"
+}
+
+###
+POST http://localhost:8000/forms/booking_request/
+Content-Type: application/json
+
+{
+   "services_of_interest" : ["serv 1", "serv 2"],
+    "user_email" : "default",
+    "user_phone" : "default",
+    "urgency" : "default",
+    "appt_flexibility" : "default",
+    "someone_willB_home" : false,
+    "requests_particular_time_of_day" : false,
+    "requested_date" : null,
+
+    "time_of_day" : "default",
+    "sent_estmiate" : false,
+    "confirmed" : false,
+    "confirmed_date" : null
+
+}
+###
+GET http://localhost:8000/forms/call_back/?email=admin@admin.com
+Content-Type: application/json
+###
+POST http://localhost:8000/forms/call_back/
+Content-Type: application/json
+
+{
+    "user_email" : "default",
+    "user_phone" : "default",
+    "requested_date_of_call" : "2022-02-02",
+    "time_of_day" :"default",
+    "call_asap" : false,
+    "confirmed" :  false,
+    "confirm_text" : false,
+    "services_of_interest" : ["popo"]
+}
+
+
+
+###
+POST http://localhost:8000/forms/hiring_form/
+Content-Type: application/json
+
+{
+    "first_name" :"default",
+    "last_name" : "default",
+    "mobile_number" : "default",
+    "email" : "def@def.com",
+    "street" : "default",
+    "city" : "default",
+    "state" : "default",
+    "zipcode" : "default",
+    "has_drivers_license" : false,
+    "has_vehicle" : false,
+    "vehicle_has_hitch" : false,
+    "desired_responsibilities" : ["popo"],
+    "has_general_experience" : false,
+    "has_pro_experience" : false,
+    "years_of_experience" : false
+}
+###
+GET http://localhost:8000/forms/invoice/1/
+Content-Type: application/json
+
+###
+GET http://localhost:8000/forms/maintenance_agreement/
+Content-Type: application/json
+
+
+###
+GET http://localhost:8000/forms/service_list/
+Content-Type: application/json
+
+# ---------------------------------------------------------------------
+
+###
+GET http://localhost:8000/blog/article/
+Content-Type: application/json
+
+###
+GET http://localhost:8000/blog/article/2/
+Content-Type: application/json
+# ________________________________________________________________________
+
+
+###
+POST http://localhost:8000/store/product/
+Content-Type: application/json
+
+{
+    "customer_email":"admin@admin.com",
+    "product": 1,
+    "quantity":  1,
+    "speed" : "models.CharField()",
+    "payment_method" : "models.CharField()",
+    "delivery_type" : "models.CharField()"
+}
+
+###
+GET http://localhost:8000/store/product-list/
+Content-Type: application/json
+
+
+###
+GET http://localhost:8000/store/customer-product-list/
+Content-Type: application/json
+
+
+
+###
+GET http://localhost:8000/store/product/
+Content-Type: application/json
+
+    {
+    "email":"admin@admin.com",
+    "product":1,
+    }
+
+###
+GET http://localhost:8000/store/customer-product-list/3/
+Content-Type: application/json
+
+###
+POST http://localhost:8000/store/customer-product-list/add_item/
+Content-Type: application/json
+
+    {
+    "email":"admin@admin.com",
+    "product":1,
+    "speed": "loo",
+    "delivery_type": "loo",
+    "payment": "loo",
+    "quantity": 1,
+    "payment_method": "admin"
+    }
+
+### ________________________________________________________________________
+###
+POST http://localhost:8000/auth/token/login
+Content-Type: application/json
+
+{
+    "email":"admin@admin.com",
+    "password":123
+}
+
+###
+GET http://127.0.0.1:8000/test_token 
+Content-Type: application/json
+Authorization: token ba0c9aa8eb745cf4a056d18de1821e19cd988f1b

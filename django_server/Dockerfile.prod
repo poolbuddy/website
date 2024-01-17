@@ -1,0 +1,22 @@
+FROM python:3.8
+
+ENV PYTHONUNBUFFERED 1
+
+# Set the working directory to /app
+WORKDIR /app
+
+# Copy only necessary files to the working directory
+COPY requirements_prod.txt ./
+
+# Install any needed packages specified in requirements.txt
+RUN pip install --no-cache-dir -r requirements_prod.txt
+
+# Copy the entire project to the working directory
+COPY . .
+# Copy entrypoint.sh and make it executable
+# Copy entrypoint.sh and make it executable
+COPY entrypoint-prod.sh /app/entrypoint-prod.sh
+RUN chmod +x /app/entrypoint-prod.sh
+
+# Specify the command to run on container start
+CMD ["/app/entrypoint-prod.sh"]
